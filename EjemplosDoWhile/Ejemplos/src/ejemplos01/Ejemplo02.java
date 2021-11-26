@@ -21,13 +21,15 @@ public class Ejemplo02 {
         double nota;
         boolean bandera = true;
         String salida;
+        double acumulador = 0;
         do {
             System.out.println("Ingrese calificación");
             nota = entrada.nextDouble();
-            cadenaFinal = String.format("%s%.2f\n", cadenaFinal, nota);
+            acumulador = acumulador + nota;
+            cadenaFinal = String.format("%s%.2f %.2f\n", cadenaFinal, nota,acumulador);
             entrada.nextLine(); // limpieza de buffer
 
-            System.out.println("Ingrese (s) si desea salir del ciclo ");
+            System.out.println("Ingrese s si desea salir del ciclo ");
             salida = entrada.nextLine();
 
             if (salida.equals("s")) {
